@@ -12,7 +12,7 @@
 ```
 import requests
 SLUG = 'test'#引号内填写你的插件ID
-def run(gid,message,uid)
+def run(gid,message,uid):
     msg = 'Hello World'
     send(gid, msg)#发送群信息
 def send(gid, message):#用于发送群信息
