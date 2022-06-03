@@ -24,3 +24,7 @@ def send(gid, message):
 	requests.get(url=put.format(botconfig['host'],str(botconfig['api_port']),gid, message))
 ```
 ![image](https://s1.328888.xyz/2022/06/03/W835R.png)
+
+# 注意：
+config内的host都对应go-cqhttp内的config.yml  
+使用前请注意端口对应
