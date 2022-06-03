@@ -2,7 +2,19 @@
 一个练习作品，QQbot基于go-cqhttp，反向http post协议
 这个程序可以支持热加载插件
 一些自己写插件都会放在这里
-
+# 给我看这个！！！！
+请把你的插件放进plugin文件加内：
+目录结构
+```
+──QQBot
+    │  bot.py
+    │  cheak_plugin.py
+    │  config.json
+    │  start.bat
+    │  
+    └─plugin
+        │  __init__.py
+```
 # Help
 你需要按照一定格式编写插件
 ## 你的插件需要包含以下信息：
