@@ -17,8 +17,10 @@ def run(gid,message,uid):
     if message[0] == 'test':#判断Q群指令，默认可以从config里面配置指令前缀(默认为 . ),插件内不需要写前缀
         send(gid, msg)#发送群信息
     send(gid, msg)#发送群信息
-def send(gid, message):#用于发送群信息
-    put = 'http://127.0.0.1:5700/send_group_msg?group_id={0}&message={1}&auto_escape=false'
-    requests.get(url=put.format(gid, message))
+def send(gid, message):
+	with open('./config.json', 'r', encoding='utf-8') as f:
+		botconfig = json.load(f)
+	put = 'http://{0}:{1}/send_group_msg?group_id={2}&message={3}&auto_escape=false'
+	requests.get(url=put.format(botconfig['host'],str(botconfig['api_port']),gid, message))
 ```
 ![image](https://s1.328888.xyz/2022/06/03/W835R.png)
