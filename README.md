@@ -16,6 +16,8 @@
         │  __init__.py
 ```
 # Help
+windows可以直接运行'start.bat'来运行程序  
+其他系统可以使用'python bot.py'运行
 你需要按照一定格式编写插件
 ## 你的插件需要包含以下信息：
 `SLUG = '插件ID'`  
