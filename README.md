@@ -14,7 +14,7 @@ import requests
 SLUG = 'test'#引号内填写你的插件ID
 def run(gid,message,uid):
     msg = 'Hello World'
-    if message[0] == 'test':#判断Q群指令，默认可以从config里面配置指令前缀,插件内不需要写前缀
+    if message[0] == 'test':#判断Q群指令，默认可以从config里面配置指令前缀(默认为 . ),插件内不需要写前缀
         send(gid, msg)#发送群信息
     send(gid, msg)#发送群信息
 def send(gid, message):#用于发送群信息
