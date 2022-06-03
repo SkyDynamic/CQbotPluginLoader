@@ -15,14 +15,6 @@ default_config = {
     'command_prefix': '.'
 }
 
-
-helpmessage = '''----[动空Bot]目前支持的功能----
-- .help -> 显示这条信息
-- .player -> 获取MC服务器在线玩家（需要跟动空说明绑定地址）
-- .jrrp -> 测试你今天的运势（每天四点刷新）
-- .mcuuid -> 查找正版玩家的UUID
-- .ofmcuuid -> 获取离线玩家UUID（不一定准确）'''
-
 @app.route('/', methods=["POST"])
 def post_data():
     if request.get_json().get('message_type') == 'group':  # 如果是群聊信息
